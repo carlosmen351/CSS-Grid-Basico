@@ -1,0 +1,111 @@
+/* Inicio generales */
+* {
+  font-family:cursive;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Fin de generales */
+/* Inicio de seccion 1 */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(300px, 2fr) 3fr;
+  grid-auto-rows: 550px;
+  border-bottom: 1px solid #ddd;
+}
+.info {
+  align-self: center;
+}
+.info h1 {
+  color: #333;
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-bottom: 24px;
+}
+.info p {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-bottom: 24px;
+}
+.info button {
+  border: none;
+  border-radius: 20px;
+  color: #333;
+  font-size: 1.3rem;
+  background-color: #e2ac18;
+  font-weight: bolder;
+  padding: 12px 24px;
+  justify-content: center;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* Fin de seccion 1 */
+/* Inicio seccion 2 */
+.dishes {
+  margin: 100px 0;
+}
+.titulo2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.dishes-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 200px));
+  grid-auto-rows: 1fr;
+  gap: 25px;
+}
+.dishes-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dishes-item-big {
+  grid-area: 1 / 1 / 3 / 3;
+}
+/* Fin seccion 2 */
+/* Inicio seccion 3 */
+.menu {
+  margin-bottom: 25px;
+}
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
+  justify-content: center;
+  gap: 20px;
+}
+.menu-grid_item {
+  background-color: #e2ac18;
+  padding: 10px;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+.menu-grid_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* Inicio seccion 3 */
+/* Media Query */
+@media screen and (max-width: 768px){
+  .heroImage {
+    display: none;
+  }
+  .hero {
+    grid-template-columns: minmax(300px, 500px);
+    justify-content: center;
+  }
+  .dishes-grid{
+  grid-template-columns: repeat(auto-fit, minmax(75px, 150px));
+
+  }
+}
